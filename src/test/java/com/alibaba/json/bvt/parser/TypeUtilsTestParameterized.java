@@ -147,6 +147,15 @@ public class TypeUtilsTestParameterized extends TestCase {
 
 
         return Arrays.asList(new Object[][] {
+
+                {new Object[] {int.class,"id",null, 0}, new Object[] {java.sql.Date.class,"date",0}},
+                {new Object[] {long.class, "id",null,0L}, new Object[] {B.class,"value", new A()}},
+                {new Object[]{short.class,"id",null, Short.valueOf("0")}, new Object[] {B.class,"value", new A()}},
+                {new Object[]{byte.class,"id",null, Byte.valueOf("0")}, new Object[] {B.class,"value", new A()}},
+                {new Object[]{boolean.class,"id",null, Boolean.FALSE}, new Object[] {B.class,"value", new A()}},
+                {new Object[]{float.class,"id",null, (float) 0}, new Object[] {B.class,"value", new A()}},
+                {new Object[]{double.class,"id",null, (double) 0}, new Object[] {B.class,"value", new A()}},
+
                 { new Object[] {int.class,"id",1L, 1}, new Object[] {java.sql.Date.class,"date",0}},
                 {new Object[] {Integer.class,"id",1L,1}, new Object[] {B.class,"value", new A()}},
                 {new Object[] {long.class, "id",1,1L}, new Object[] {B.class,"value", new A()}},
